@@ -1,0 +1,40 @@
+server:
+    port: 8081
+spring:
+#开发环境配置
+    profiles:
+         active: dev
+#页面模板配置
+    thymeleaf:
+         mode: HTML5
+         encoding: UTF-8
+         prefix: classpath:/templates/
+         suffix: .html
+         cache: false
+#Http请求编码
+    http:
+        encoding:
+          charset: UTF-8
+          enabled: true
+          force:   true
+mybatis:
+    config-locations: classpath:mybatis/mybatis-config.xml
+    mapper-locations: classpath:mappers/*.xml
+    
+    
+    
+    
+#JPush(极光)
+jpush:
+     secret: ee6d0426d76d6aa93ae93f73
+     app_key: b09dfdce4f5fe96a1888ddca
+     devs_time_to_live: 60
+     ios_sound: sound.caf
+#GPush(个推)
+gpush:  
+     app_id: VtfL8IIcl0743IdPrRjyB7
+     app_key: bDsBly2Yrj85QvWYKFsoy1
+     app_secret: h8FB5OSAzH8Ce9z6B2ziO1
+     master_secret: 41zGVeQIyk9lei6ml5zYt
+    
+    
